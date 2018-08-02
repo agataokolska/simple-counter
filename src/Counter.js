@@ -1,10 +1,13 @@
 import React from 'react'
 
 class Counter extends React.Component {
+    state = {
+        number: 0
+    }
     render(){
         return (
             <div>
-                <h1>0</h1>
+                <h1>{this.state.number}</h1>
                 <button>+</button>
                 <button>-</button>
             </div>    
