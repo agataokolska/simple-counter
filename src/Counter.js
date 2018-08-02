@@ -25,6 +25,11 @@ class Counter extends React.Component {
             number: this.state.number - 5
         })
     }
+    resetCounter = () => {
+        this.setState({
+            number: this.state.number = 0
+        })
+    }
     render() {
         return (
             <div>
@@ -48,6 +53,11 @@ class Counter extends React.Component {
                     onClick={this.subtractNumberFive}
                 >
                     SUBTRACT 5
+                </button>
+                <button
+                    onClick={this.resetCounter}
+                >
+                    RESET COUNTER 
                 </button>
             </div>
         )
