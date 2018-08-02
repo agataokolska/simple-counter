@@ -1,13 +1,10 @@
 import React from 'react'
+import Counter from './Counter'
+const App =()=> (
 
-class App extends React.Component {
-  render() {
-    return (
       <div>
-        counter app
+        <Counter/>
       </div>
-    )
-  }
-}
+)
 
-export default App;
+export default App
