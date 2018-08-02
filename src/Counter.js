@@ -10,12 +10,21 @@ class Counter extends React.Component {
             number: this.state.number + 1
         })
     }
-    subtractNumber = () =>{
+    subtractNumber = () => {
         this.setState({
             number: this.state.number - 1
         })
     }
-
+    addNumberFive = () => {
+        this.setState({
+            number: this.state.number + 5
+        })
+    }
+    subtractNumberFive = () => {
+        this.setState({
+            number: this.state.number - 5
+        })
+    }
     render() {
         return (
             <div>
@@ -30,10 +39,14 @@ class Counter extends React.Component {
                 >
                 SUBTRACT 1
                 </button>
-                <button>
+                <button
+                    onClick={this.addNumberFive}
+                >
                     ADD 5
                 </button>
-                <button>
+                <button
+                    onClick={this.subtractNumberFive}
+                >
                     SUBTRACT 5
                 </button>
             </div>
