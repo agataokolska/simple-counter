@@ -2,15 +2,35 @@ import React from 'react'
 
 class Counter extends React.Component {
     state = {
-        number: 0
+        number: this.props.number
     }
-    render(){
+
+    addNumber = () => {
+        this.setState({
+            number: this.state.number + 1
+        })
+    }
+    subtractNumber = () =>{
+        this.setState({
+            number: this.state.number - 1
+        })
+    }
+
+    render() {
         return (
             <div>
                 <h1>{this.state.number}</h1>
-                <button>+</button>
-                <button>-</button>
-            </div>    
+                <button
+                    onClick={this.addNumber}
+                >
+                ADD 1
+                </button>
+                <button
+                    onClick={this.subtractNumber}
+                >
+                SUBTRACT 1
+                </button>
+            </div>
         )
     }
 }
