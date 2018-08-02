@@ -30,6 +30,12 @@ class Counter extends React.Component {
                 >
                 SUBTRACT 1
                 </button>
+                <button>
+                    ADD 5
+                </button>
+                <button>
+                    SUBTRACT 5
+                </button>
             </div>
         )
     }
