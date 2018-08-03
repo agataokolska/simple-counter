@@ -5,14 +5,15 @@ class Counter extends React.Component {
         number: this.props.number
     }
 
-    componentDidMount() {
+    componentWillMount() {
         console.log('componentDidMount')
          const lastState = JSON.parse(localStorage.getItem('simple-counter-state'))
-         if(lastState === null) return this.setState(lastState)
+         if(lastState === null) return 
+         this.setState(lastState)
     }
 
-     componentWillUnmount(){
-        console.log('componentWillUnmount')
+     componentWillUpdate(){
+        console.log('componentWillUpdate')
          localStorage.setItem('simple-counter-state', JSON.stringify(this.state))
     }
 
