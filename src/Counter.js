@@ -13,7 +13,7 @@ class Counter extends React.Component {
     }
 
      componentDidUpdate(){
-        console.log('componentWillUpdate')
+        console.log('componentDidUpdate')
          localStorage.setItem('simple-counter-state', JSON.stringify(this.state))
     }
 
